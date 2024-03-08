@@ -1,4 +1,4 @@
-http://example.com/2024/03/08/bi-ye-da-bian-xu-qiu-wen-dang-mei-you-xiang-hao-zuo-shi-me/
-http://example.com/2024/03/07/hello-world/
-http://example.com/2024/03/08/jian-dan-shi-yong-clion-kai-fa-stm32h7-xi-lie-tian-keng-zhong/
-http://example.com/
+https://yangsuguo.github.io/ysg.github.io/2024/03/08/bi-ye-da-bian-xu-qiu-wen-dang-mei-you-xiang-hao-zuo-shi-me/
+https://yangsuguo.github.io/ysg.github.io/2024/03/07/hello-world/
+https://yangsuguo.github.io/ysg.github.io/2024/03/08/jian-dan-shi-yong-clion-kai-fa-stm32h7-xi-lie-tian-keng-zhong/
+https://yangsuguo.github.io/ysg.github.io
