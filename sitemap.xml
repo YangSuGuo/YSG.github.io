@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yangsuguo.github.io/ysg.github.io/2024/03/08/bi-ye-da-bian-xu-qiu-wen-dang-mei-you-xiang-hao-zuo-shi-me/</loc>
+    <loc>https://yangsuguo.github.io/ysg.github.io/2023/11/20/bi-ye-da-bian-xu-qiu-wen-dang-mei-you-xiang-hao-zuo-shi-me/</loc>
     
-    <lastmod>2024-03-08</lastmod>
+    <lastmod>2024-03-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yangsuguo.github.io/ysg.github.io/categories/index.html</loc>
+    
+    <lastmod>2024-03-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yangsuguo.github.io/ysg.github.io/tags/index.html</loc>
+    
+    <lastmod>2024-03-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,11 +49,18 @@
 
   <url>
     <loc>https://yangsuguo.github.io/ysg.github.io</loc>
-    <lastmod>2024-03-08</lastmod>
+    <lastmod>2024-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://yangsuguo.github.io/ysg.github.io/tags/STM32/</loc>
+    <lastmod>2024-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   
