@@ -2,7 +2,7 @@
 'use strict';
 
 // 菜单
-document.querySelector('.menu-switch').addEventListener('click', function() {
+/*document.querySelector('.menu-switch').addEventListener('click', function() {
   const menuContainer = document.querySelector('.menu-container');
 
   if (this.classList.contains('icon-menu-outline')) {
@@ -21,7 +21,7 @@ document.querySelector('.menu-switch').addEventListener('click', function() {
       }
     }, 600);
   }
-});
+});*/
 
 // 代码复制
 function addCopyIcons() {
