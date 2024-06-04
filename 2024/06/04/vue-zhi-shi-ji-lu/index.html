@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+
+    
+<script>!function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("use-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()</script>
+    
+
+<meta charset="utf-8" >
+
+<title>Vue 知识集录</title>
+<meta name="keywords" content="Vue 知识集录, 楊蘇國的博客">
+<meta name="description" content="Vue 知识集录生命周期vue生命周期分为四个阶段第一阶段（创建阶段）：beforeCreate，created第二阶段（挂载阶段）：beforeMount（render），mounted第三阶段（更新阶段）：beforeUpdate，up">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Vue 知识集录">
+<meta property="og:description" content="Vue 知识集录生命周期vue生命周期分为四个阶段第一阶段（创建阶段）：beforeCreate，created第二阶段（挂载阶段）：beforeMount（render），mounted第三阶段（更新阶段）：beforeUpdate，up">
+
+<link rel="shortcut icon" href="/ysg.github.io/images/conner.png">
+<link rel="stylesheet" href="/ysg.github.io/style/main.css">
+
+  <link rel="stylesheet" href="/ysg.github.io/style/simple-lightbox.min.css"><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/ysg.github.io/atom.xml" title="楊蘇國的博客" type="application/atom+xml">
+</head>
+  <body>
+    <div id="app" class="main">
+
+<div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yangsuguo.github.io/ysg.github.io">
+        <img class="avatar" src="/ysg.github.io/images/conner.png" alt="logo" width="32px" height="32px">
+      </a>
+      <a href="https://yangsuguo.github.io/ysg.github.io">
+        <h1 class="site-title">楊蘇國的博客</h1>
+      </a>
+    </div>
+    <div class="right">
+        <a href="/ysg.github.io/tags">
+            <i class="icon icon-pricetags-outline" style="font-size: 24px; "></i>
+        </a>
+    </div>
+      </div>
+</div>
+
+<div class="menu-container" style="height: 0;opacity: 0;">
+    <nav class="menu-list">
+        
+            
+                <a href="/ysg.github.io/tags" class="menu purple-link">
+                    首页
+                </a>
+            
+        
+    </nav>
+</div>
+
+
+
+  <div class="content-container">
+    <div class="post-detail">
+      
+      <h2 class="post-title">Vue 知识集录</h2>
+      <div class="post-info post-detail-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-06-04</span>
+        
+          <span>
+          <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="/ysg.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%84%E5%88%92/">
+              个人规划
+                
+              </a>
+            
+          </span>
+        
+      </div>
+      <div class="post-content-wrapper">
+        <div class="post-content">
+          <h1 id="Vue-知识集录"><a href="#Vue-知识集录" class="headerlink" title="Vue 知识集录"></a>Vue 知识集录</h1><h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>vue生命周期分为四个阶段<br>第一阶段（创建阶段）：beforeCreate，created<br>第二阶段（挂载阶段）：beforeMount（render），mounted<br>第三阶段（更新阶段）：beforeUpdate，updated<br>第四阶段（销毁阶段）：beforeDestroy，destroyed</p>
+<h3 id="1-beforeCreate"><a href="#1-beforeCreate" class="headerlink" title="1. beforeCreate"></a>1. beforeCreate</h3><p><strong>官网</strong>：在实例初始化之后,进行数据侦听和事件&#x2F;侦听器的配置之前同步调用。</p>
+<p><strong>详细</strong>：<strong>在这个阶段，数据是获取不到的，并且真实dom元素也是没有渲染出来的</strong></p>
+<hr>
+<h3 id="2-created"><a href="#2-created" class="headerlink" title="2. created"></a>2. created</h3><p><strong>官网</strong>：在实例创建完成后被立即同步调用。在这一步中，实例已完成对选项的处理，意味着以下内容已被配置完毕：数据侦听、计算属性、方法、事件&#x2F;侦听器的回调函数。然而，挂载阶段还没开始，且 $el property 目前尚不可用。</p>
+<p><strong>详细</strong>：在这个阶段，<strong>可以访问到数据了</strong>，但是页面当中真实dom节点还是没有渲染出来，在这个钩子函数里面，可以进行相关初始化事件的绑定、发送请求操作</p>
+<hr>
+<h3 id="3-beforeMount"><a href="#3-beforeMount" class="headerlink" title="3. beforeMount"></a>3. beforeMount</h3><p><strong>官网</strong>：在挂载开始之前被调用：相关的 render 函数首次被调用。</p>
+<p><strong>详细</strong>：代表dom马上就要被渲染出来了，但是却还没有真正的渲染出来，这个钩子函数与created钩子函数用法基本一致，可以进行相关初始化事件的绑定、发送ajax操作</p>
+<hr>
+<h3 id="4-mounted"><a href="#4-mounted" class="headerlink" title="4. mounted"></a>4. mounted</h3><p><strong>官网</strong>：实例被挂载后调用，这时 el 被新创建的 vm.$el 替换了。如果根实例挂载到了一个文档内的元素上，当 mounted 被调用时 vm.$el 也在文档内。<br>注意 mounted 不会保证所有的子组件也都被挂载完成。如果你希望等到整个视图都渲染完毕再执行某些操作，可以在 mounted 内部使用 vm.$nextTick：</p>
+<p><strong>详细</strong>：挂载阶段的最后一个钩子函数,数据挂载完毕，真实dom元素也已经渲染完成了,这个钩子函数内部可以做一些实例化相关的操作</p>
+<hr>
+<h3 id="5-beforeUpdate"><a href="#5-beforeUpdate" class="headerlink" title="5. beforeUpdate"></a>5. beforeUpdate</h3><p><strong>官网</strong>：在数据发生改变后，DOM 被更新之前被调用。这里适合在现有 DOM 将要被更新之前访问它，比如移除手动添加的事件监听器。</p>
+<p><strong>详细</strong>：这个钩子函数初始化的不会执行,当组件挂载完毕的时候，并且当数据改变的时候，才会立马执行,这个钩子函数获取dom的内容是更新之前的内容</p>
+<hr>
+<h3 id="6-updated"><a href="#6-updated" class="headerlink" title="6. updated"></a>6. updated</h3><p><strong>官网</strong>：在数据更改导致的虚拟 DOM 重新渲染和更新完毕之后被调用。<br>当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。</p>
+<p><strong>详细</strong>：这个钩子函数获取dom的内容是更新之后的内容生成新的虚拟dom，新的虚拟dom与之前的虚拟dom进行比对，差异之后，就会进行真实dom渲染。在updated钩子函数里面就可以获取到因diff算法比较差异得出来的真实dom渲染了。</p>
+<hr>
+<h3 id="7-beforeDestroy"><a href="#7-beforeDestroy" class="headerlink" title="7. beforeDestroy"></a>7. beforeDestroy</h3><p><strong>官网</strong>：实例销毁之前调用。在这一步，实例仍然完全可用。</p>
+<p><strong>详细</strong>：当组件销毁的时候，就会触发这个钩子函数代表销毁之前，可以做一些善后操作,可以清除一些初始化事件、定时器相关的东西。</p>
+<hr>
+<h3 id="8-destroyed"><a href="#8-destroyed" class="headerlink" title="8. destroyed"></a>8. destroyed</h3><p><strong>官网</strong>：实例销毁后调用。该钩子被调用后，对应 Vue 实例的所有指令都被解绑，所有的事件监听器被移除，所有的子实例也都被销毁。</p>
+<p><strong>详细</strong>：Vue实例失去活性，完全丧失功能</p>
+<a class="simple-lightbox" target="_blank" rel="noopener" href="https://img.picui.cn/free/2024/06/04/665eb84427e62.png"><img   src="/ysg.github.io/images/loading.svg" data-src="https://img.picui.cn/free/2024/06/04/665eb84427e62.png"  style="zoom:25%;"  lazyload></a>
+
+<h2 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h2><ul>
+<li>v-once - 定义它的元素或组件只渲染一次，包括元素或组件的所有节点，首次渲染后，不再随数据的变化重新渲染，将被视为静态内容。</li>
+<li>v-cloak - 这个指令保持在元素上直到关联实例结束编译 – 解决初始化慢与闪动</li>
+<li>v-bind - 绑定属性，动态更新HTML元素上的属性。例如 v-bind:class。</li>
+<li>v-on - 用于监听DOM事件。例如 v-on:click v-on:keyup</li>
+<li>v-html - 赋值就是变量的innerHTML – 注意防止xss攻击</li>
+<li>v-text - 更新元素的textContent</li>
+<li>v-model - 在普通标签。变成value和input的语法糖，并且会处理拼音输入法的问题。2、再组件上。也是处理value和input语法糖。</li>
+<li>v-if &#x2F; v-else &#x2F; v-else-if。可以配合template使用；在render函数里面就是三元表达式。</li>
+<li>v-show - 使用指令来实现 – 最终会通过display来进行显示隐藏</li>
+<li>v-for - 循环指令编译出来的结果是 -L 代表渲染列表。优先级比v-if高最好不要一起使用，尽量使用计算属性去解决。注意增加唯一key值，不要使用index作为key。</li>
+<li>v-pre - 跳过这个元素以及子元素的编译过程，以此来加快整个项目的编译速度。</li>
+</ul>
+<h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><p><strong>事件修饰符</strong></p>
+<ul>
+<li>.stop 阻止事件继续传播</li>
+<li>.prevent 阻止标签默认行为</li>
+<li>.capture 使用事件捕获模式，即元素自身触发的事件先在此处处理，然后才交由内部元素进行处理</li>
+<li>.self 只当在 event.target 是当前元素自身时触发处理函数</li>
+<li>.once 事件只会触发一次</li>
+<li>.passive 告诉浏览器你不想阻止事件的默认行为</li>
+</ul>
+<p><strong>v-model 的修饰符</strong></p>
+<ul>
+<li>.lazy 通过这个修饰符，转变为在 change 事件再同步</li>
+<li>.number 自动将用户输入值转化为数值类型</li>
+<li>.trim 自动过滤用户输入的收尾空格</li>
+</ul>
+<p><strong>键盘事件修饰符</strong></p>
+<ul>
+<li>.enter</li>
+<li>.tab</li>
+<li>.delete (捕获“删除”和“退格”键)</li>
+<li>.esc</li>
+<li>.space</li>
+<li>.up</li>
+<li>.down</li>
+<li>.left</li>
+<li>.right</li>
+</ul>
+<p><strong>系统修饰符</strong></p>
+<ul>
+<li>.ctrl</li>
+<li>.alt</li>
+<li>.shift</li>
+<li>.meta</li>
+</ul>
+<p><strong>鼠标按钮修饰符</strong></p>
+<ul>
+<li>.left</li>
+<li>.right</li>
+<li>.middle</li>
+</ul>
+<h2 id="组件通讯"><a href="#组件通讯" class="headerlink" title="组件通讯"></a>组件通讯</h2><p>父子通信：</p>
+<ol>
+<li>父向子传递数据是通过 props，子向父是通过 events（emit）；</li>
+<li>通过父链子链也可以通信（parent &#x2F; $children）；</li>
+<li>ref也可以访问组件实例；provide &#x2F; inject API。</li>
+</ol>
+<p>二、兄弟通信：</p>
+<ol>
+<li>Bus</li>
+<li>Vuex</li>
+<li>Pinia</li>
+</ol>
+<p>三、跨级通信：</p>
+<ol>
+<li>Bus；</li>
+<li>Vuex；</li>
+<li>provide &#x2F; inject API。</li>
+</ol>
+<h2 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h2><h4 id="会修改原数组的-会进行渲染更新"><a href="#会修改原数组的-会进行渲染更新" class="headerlink" title="会修改原数组的 会进行渲染更新"></a>会修改原数组的 会进行渲染更新</h4><ul>
+<li><p>push()：向数组末尾添加一个或多个元素。</p>
+</li>
+<li><p>pop()：移除数组中的最后一个元素。</p>
+</li>
+<li><p>shift()：移除数组中的第一个元素。</p>
+</li>
+<li><p>unshift()：向数组开头添加一个或多个元素。</p>
+</li>
+<li><p>splice()：从指定索引位置添加或移除元素。</p>
+</li>
+<li></li>
+<li><p>join()：将数组合并成字符串</p>
+</li>
+<li><p>reverse()：逆序</p>
+</li>
+<li><p>sort()：排序，如果数组包含undefined，会被排到数组的尾部，默认以字母表顺序排序</p>
+</li>
+<li><p>toString()：将每个元素转化为字符串</p>
+</li>
+<li><p>forEach()：遍历数组，为每个元素调用指定的函数</p>
+</li>
+</ul>
+<h4 id="不修改原数组的-不会进行渲染更新"><a href="#不修改原数组的-不会进行渲染更新" class="headerlink" title="不修改原数组的 不会进行渲染更新"></a>不修改原数组的 不会进行渲染更新</h4><ul>
+<li><p>slice()：返回数组的一部分，不修改原数组。</p>
+</li>
+<li><p>map() ：返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。<br>按照原始数组元素顺序依次处理元素。</p>
+</li>
+<li><p>concat()：创建并返回一个新数组可添加</p>
+</li>
+<li><p>filter()：根据条件过滤数组并返回符合条件的新数组，不修改原数组。</p>
+</li>
+<li></li>
+<li><p>every()方法是只有数组中所以元素都满足某个条件才会返回true； </p>
+</li>
+<li><p>some()方法是只要有满足条件的值，就返回true</p>
+</li>
+<li><p>indexOf()：搜索整个数组中具有给定值的元素</p>
+</li>
+<li><p>lastIndexOf()：反向搜索整个数组中具有给定值的元素</p>
+</li>
+</ul>
+
+        </div>
+          
+        <div class="top-div">
+          <ol class="top-box"><li class="top-box-item top-box-level-1"><a class="top-box-link" href="#Vue-%E7%9F%A5%E8%AF%86%E9%9B%86%E5%BD%95"><span class="top-box-text">Vue 知识集录</span></a><ol class="top-box-child"><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="top-box-text">生命周期</span></a><ol class="top-box-child"><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#1-beforeCreate"><span class="top-box-text">1. beforeCreate</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#2-created"><span class="top-box-text">2. created</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#3-beforeMount"><span class="top-box-text">3. beforeMount</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#4-mounted"><span class="top-box-text">4. mounted</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#5-beforeUpdate"><span class="top-box-text">5. beforeUpdate</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#6-updated"><span class="top-box-text">6. updated</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#7-beforeDestroy"><span class="top-box-text">7. beforeDestroy</span></a></li><li class="top-box-item top-box-level-3"><a class="top-box-link" href="#8-destroyed"><span class="top-box-text">8. destroyed</span></a></li></ol></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4"><span class="top-box-text">内置指令</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="top-box-text">修饰符</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E8%AE%AF"><span class="top-box-text">组件通讯</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95"><span class="top-box-text">数组方法</span></a></li></ol></li></ol>
+        </div>
+          
+      </div>
+    </div>
+
+    
+      <div class="next-post">
+        <a class="purple-link" href="/ysg.github.io/2024/04/10/hele/">
+          <h3 class="post-title">
+            下一篇：毕业设计文档
+          </h3>
+        </a>
+      </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+<footer>
+<div class="site-footer">
+  <div class="social-container">
+    
+      
+        <a aria-label="跳转至github" href="https://github.com/YangSuGuo" target="_blank">
+          <i class="icon icon-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  
+  
+  
+  
+  
+  
+</div>
+</footer>
+
+
+      </div>
+    </div>
+    
+<script id="hexo-configurations"> window.theme_config = {"image":{"lazyload_enable":true,"photo_zoom":"simple-lightbox"}}; window.is_post = true; </script>
+
+<script src="/ysg.github.io/js/main.js"></script>
+
+
+
+
+
+
+  <script src="/ysg.github.io/js/simple-lightbox.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {new SimpleLightbox('.post-detail .simple-lightbox', {fileExt: false,captionsData:'alt'});});</script></body>
+</html>
+
