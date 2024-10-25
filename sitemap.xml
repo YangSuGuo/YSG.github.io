@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://yangsuguo.github.io/ysg.github.io/2024/06/04/vue-zhi-shi-ji-lu/</loc>
+    <loc>https://yangsuguo.github.io/ysg.github.io/2024/03/10/jiu-ye-zhi-dao/</loc>
     
-    <lastmod>2024-06-04</lastmod>
+    <lastmod>2024-10-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,16 +13,16 @@
   <url>
     <loc>https://yangsuguo.github.io/ysg.github.io/2024/04/10/hele/</loc>
     
-    <lastmod>2024-06-04</lastmod>
+    <lastmod>2024-10-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://yangsuguo.github.io/ysg.github.io/2024/03/10/jiu-ye-zhi-dao/</loc>
+    <loc>https://yangsuguo.github.io/ysg.github.io/2024/06/04/vue-zhi-shi-ji-lu/</loc>
     
-    <lastmod>2024-03-12</lastmod>
+    <lastmod>2024-06-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -39,15 +39,6 @@
   
   <url>
     <loc>https://yangsuguo.github.io/ysg.github.io/tags/index.html</loc>
-    
-    <lastmod>2024-03-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yangsuguo.github.io/ysg.github.io/2023/11/20/bi-ye-da-bian-xu-qiu-wen-dang-mei-you-xiang-hao-zuo-shi-me/</loc>
     
     <lastmod>2024-03-10</lastmod>
     
@@ -76,7 +67,7 @@
 
   <url>
     <loc>https://yangsuguo.github.io/ysg.github.io</loc>
-    <lastmod>2024-06-04</lastmod>
+    <lastmod>2024-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,14 +75,14 @@
   
   <url>
     <loc>https://yangsuguo.github.io/ysg.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2024-06-04</lastmod>
+    <lastmod>2024-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://yangsuguo.github.io/ysg.github.io/tags/STM32/</loc>
-    <lastmod>2024-06-04</lastmod>
+    <lastmod>2024-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
